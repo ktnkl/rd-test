@@ -1,0 +1,167 @@
+.liked {
+  display: flex;
+  flex-direction: column;
+  row-gap: 51px;
+}
+
+.liked-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.liked-item {
+  position: relative;
+  display: grid;
+  height: 120px;
+  width: 100%;
+  grid-template: 1fr 1fr 1.5fr / 85px auto 55px;
+  column-gap: 20px;
+  grid-template-areas: 
+    "img title like"
+    "img description like"
+    "img price price";
+}
+
+.liked-item::before {
+  position: absolute;
+  content: '';
+  width: calc(100% - 105px);
+  height: 1px;
+  background-color: var(--lime);
+  top: 60px;
+  left: 105px;
+}
+
+.liked-item__img {
+  grid-area: img;
+  justify-self: start;
+}
+
+.liked-item-title {
+  grid-area: title;
+  place-self: center start;
+  display: flex;
+  column-gap: 10px;
+}
+
+.liked-item__color {
+  width: 16px;
+  aspect-ratio: 1;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.liked-item__color_cian {
+  background-color: #29D0D9;
+}
+
+.liked-item__color_orange {
+  background-color: #FFC4A5;
+}
+
+.liked-item__color_pink {
+  background-color: var(--custom-pink);
+}
+
+.liked-item__name {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.liked-item__category {
+  grid-area: description;
+  place-self: center start;
+
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.liked-item__like {
+  grid-area: like;
+  place-self: center end;
+  background-color: transparent;
+  width: 50px;
+  aspect-ratio: 1;
+  border: none;
+  padding: 4px;
+  background-image: url(../../assets/liked/Vector.svg);
+  background-size: 22px 20px;
+  background-color: rgba(256, 256, 256, 0.3);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 2px solid var(--custom-pink);
+  border-radius: 50%;
+  position: relative;
+}
+
+
+.liked-item__price {
+  grid-area: price;
+  place-self: center start;
+
+  font-family: 'Floreste';
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 100%;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+}
+
+.liked-item__price > sup {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+@media (min-width: 756px) {
+  .liked-wrapper {
+    row-gap: 60px;
+  }
+  .liked-item {
+    width: 523px
+  }
+
+  .liked-item-title {
+    column-gap: 12px;
+  }
+
+  .liked-item__color {
+    width: 17px;
+    height: 17px;
+    align-self: center;
+  }
+
+  .liked-item__name {
+    font-size: 2rem;
+  }
+
+  .liked-item__category {
+    font-size: 1.8rem;
+  }
+
+  .liked-item__like {
+    width: 54px;
+    aspect-ratio: 1;
+    background-size: 16px 14px;
+  }
+
+  .liked-item__price {
+    font-size: 2.8rem;
+  }
+
+  .liked-item__price > sup {
+    font-size: 2rem;
+  }
+
+ 
+}

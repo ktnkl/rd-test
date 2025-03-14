@@ -1,0 +1,165 @@
+.contacts {
+  display: grid;
+  grid-template: repeat(3, auto) / 100%;
+  grid-template-areas: 
+    "info"
+    "feedback"
+    "map";
+}
+
+.contacts-info {
+  grid-area: info;
+  background-color: var(--lavender);
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  padding: 38px 17px;
+  height: auto;
+}
+
+.contacts-feedback {
+  grid-area: feedback;
+  background-color: var(--custom-pink);
+  padding: 60px 15px;
+}
+
+.contacts-map {
+  grid-area: map;
+}
+
+
+.contacts-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-info-item__head {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: rgba(256, 256, 256, 0.5);
+  margin-bottom: 30px;
+}
+
+.contacts-info-item-body__text {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 2.3rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.contacts-info-item-body__text_phone-number {
+  font-family: 'Floreste';
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 100%;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+}
+
+.contacts-info-item-body__subtext {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 0%;
+  margin-bottom: 60px;
+}
+
+.contacts-info-item-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: 1.74rem;
+}
+
+.contacts-info-item-bottom_adress {
+  display: none;
+}
+
+
+.contacts-feedback__title {
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-bottom: 63px;
+}
+
+
+@media (min-width: 992px) {
+  .contacts {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, auto);
+    grid-template-areas: 
+      "info"
+      "feedback"
+      "map";
+    grid-template-areas: 
+      "info feedback"
+      "map map";
+  }
+
+  .contacts-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 83px 181px 78.4px 83px;
+  }
+
+  .contacts-info-item__head{
+    margin-bottom: 51px;
+    font-size: 1.5rem;
+  }
+
+  .contacts-info-item-body__text {
+    margin-bottom: 33px;
+    font-size: 6rem;
+  }
+
+  .contacts-info-item-body__text_phone-number{
+    font-size: 4rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts-info-item-body__subtext {
+    font-size: 1.8rem;
+    margin-bottom: 114px;
+  }
+
+  .contacts-info-item-bottom_adress {
+    display: flex;
+    align-items: center;
+    font-family: 'Euclid Circular A';
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    height: 40px;
+  }
+
+  .contacts-info-item-bottom__arrow {
+    width: 22px;
+    aspect-ratio: 1;
+  }
+
+}
+
+
+
+
+
+
+
+
+

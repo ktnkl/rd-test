@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Le Murmure';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/le_murmure/le-murmure.otf');
+}
+
+@font-face {
+  font-family: 'Floreste';
+  font-weight: 400;
+  src: url('../fonts/floreste/FloresteWavy-BWPqd.otf');
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('../fonts/euclid_circular_a/Euclid\ Circular\ A\ Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('./fonts/circe/CRC35.otf');
+}

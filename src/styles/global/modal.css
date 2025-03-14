@@ -1,0 +1,182 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  -webkit-transition: opacity 200ms ease-in; 
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+}
+
+.modal_fullscreen {
+  backdrop-filter: blur(10px);
+  background-color: rgba(256, 256, 256, 0.5);
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+  background-color: var(--lavender);
+}
+
+.modal-dialog {
+  position: relative;
+  margin: 20px 15px;
+  background-color: rgba(51, 32, 101, 0.18);
+  backdrop-filter: blur(10px);
+  padding: 22px 15px;
+  font-family: 'Euclid Circular A';
+  color: #fff;
+  width: calc(100% - 30px);
+  height: calc(100dvh - 40px);
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  border-radius: 20px;
+  scrollbar-color: var(--lavander-shadow) rgba(51, 32, 101, 0.18);
+}
+
+.modal_fullscreen .modal-dialog {
+  padding: 0;
+}
+
+
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: .3rem;
+  outline: 0;
+  overflow-y: visible;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  
+}
+
+.modal_fullscreen .modal-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 103;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+}  
+/* свойства для кнопки "Закрыть" */
+.modal-close {
+  float: right;
+  text-decoration: none;
+  background-image: url(../../assets/modal/close.svg);
+  background-size: contain;
+  width: 22px;
+  aspect-ratio: 1;
+}
+
+
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px 0;
+  overflow: auto;
+}
+
+.modal_fullscreen .modal-body {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    display: flex;
+    justify-content: end;
+  }
+
+  .modal:target{
+    background-color: transparent;
+  }
+
+  .modal-dialog {
+    margin: 115px 41px;
+    border-radius: 20px;
+    width: fit-content;
+    min-width: 35%;
+    height: fit-content;
+    max-height: calc(100vh - 230px);
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    padding: 45px;
+    scrollbar-width: none;
+  }
+
+  .modal-dialog::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal_fullscreen .modal-dialog {
+    width: 100%;
+    margin: 60px;
+    height: calc(100vh - 120px);
+  }
+
+  .modal-title {
+    font-family: 'Euclid Circular A';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+  }
+
+  .modal-close {
+    background-image: url(../../assets/modal/close.svg);
+    width: 36px;
+  }
+}

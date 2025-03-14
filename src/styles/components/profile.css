@@ -1,0 +1,45 @@
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+
+.profile-wrapper-buttons {
+  display: flex;
+  justify-content: start;
+  column-gap: 15px;
+  font-family: 'Euclid Circular A';
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+}
+
+.profile-wrapper-buttons__common {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.profile-wrapper-buttons__common_arrow {
+  position: relative;
+}
+
+.profile-wrapper-buttons__common_arrow::after {
+  position: absolute;
+  content: "";
+  background-image: url('../../assets/contacts/arrow-narrow-down-svgrepo-com\ \(1\).svg');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 22px;
+  rotate: -90deg;
+  top: 0;
+  left: 10px;
+}
+
+@media (min-width: 992px) {
+  .profile-wrapper-buttons {
+    font-size: 1.5rem;
+  }
+}
