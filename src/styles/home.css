@@ -465,6 +465,7 @@
   flex-direction: column;
   row-gap: 35px;
   color: #fff;
+  margin-top: 120px;
 }
 
 .blog-header {
@@ -1080,6 +1081,10 @@
 
   .row__star {
     width: 21px;
+  }
+
+  .blog {
+    margin-top: 170px;
   }
 
   .blog-header {
